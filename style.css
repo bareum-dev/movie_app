@@ -15,6 +15,7 @@ html {
   margin: 0 auto;
   padding: 1rem;
   max-width: 1280px;
+  position: relative;
 }
 
 .header {
@@ -118,4 +119,60 @@ html {
 .rating--green { /* more 8 */
   border: 2px solid green;
   color: green;
+}
+
+/* modal */
+
+.modal__bg {
+  display: none;
+}
+
+.modal__bg.opened {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  width: 700px;
+  height: 500px;
+  display: none;
+  border: 1px solid red;
+
+  position: absolute;
+  top: 10vh;
+
+  overflow-y: auto;
+}
+
+.modal.opened {
+  position: fixed;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: #f1f5f8;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal__poster {
+  max-height: 200px;
+}
+
+.modal__poster img {
+  max-height: 100%;
+}
+
+.stop-scloll {
+  height: 100%;
+  overflow: hidden;
 }
